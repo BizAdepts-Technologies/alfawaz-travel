@@ -1,0 +1,105 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+    --primary: 180 83% 23%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 30 80% 54%;
+    --secondary-foreground: 240 5.9% 10%;
+    --muted: 30 33% 95%;
+    --muted-foreground: 0 0% 42%;
+    --accent: 30 80% 54%;
+    --accent-foreground: 240 5.9% 10%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 180 20% 85%;
+    --input: 180 20% 85%;
+    --ring: 180 83% 23%;
+    --radius: 0.625rem;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-cream text-charcoal font-body antialiased;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  /* Focus visible styles for accessibility */
+  :focus-visible {
+    outline: 2px solid #0A6B6B;
+    outline-offset: 2px;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 px-9 py-3.5 bg-amber text-charcoal font-body font-semibold text-sm tracking-wider uppercase rounded-full transition-all duration-300;
+  }
+  .btn-primary:hover {
+    @apply bg-amber-light -translate-y-0.5;
+    box-shadow: 0 8px 24px rgba(232, 145, 42, 0.3);
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 px-9 py-3.5 bg-teal text-white font-body font-semibold text-sm tracking-wider uppercase rounded-full transition-all duration-300;
+  }
+  .btn-secondary:hover {
+    @apply bg-teal-light -translate-y-0.5;
+    box-shadow: 0 8px 24px rgba(10, 107, 107, 0.3);
+  }
+
+  .btn-whatsapp {
+    @apply inline-flex items-center justify-center gap-2 px-9 py-3.5 bg-whatsapp text-white font-body font-semibold text-sm tracking-wider rounded-full transition-all duration-300;
+  }
+  .btn-whatsapp:hover {
+    @apply bg-whatsapp-dark -translate-y-0.5;
+    box-shadow: 0 8px 24px rgba(37, 211, 102, 0.3);
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center justify-center gap-2 px-8 py-3 bg-transparent text-teal font-body font-semibold text-sm tracking-wider uppercase rounded-full border-2 border-teal transition-all duration-300;
+  }
+  .btn-outline:hover {
+    @apply bg-teal text-white;
+  }
+
+  .section-label {
+    @apply font-body font-medium text-xs tracking-[0.1em] uppercase text-amber;
+  }
+
+  .section-title {
+    @apply font-display font-semibold text-charcoal leading-tight;
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    letter-spacing: -0.01em;
+  }
+
+  .section-padding {
+    @apply py-20 md:py-28 lg:py-32;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
