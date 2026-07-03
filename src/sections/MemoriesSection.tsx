@@ -5,19 +5,19 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 const memories = [
   {
     title: 'Hidden family gems',
-    image: 'https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?q=80&w=800&auto=format&fit=crop', // Family/travel image
+    image: `${import.meta.env.BASE_URL}/images/travel_family_memory.png`, // Family/travel image
   },
   {
     title: 'Discovering culture',
-    image: 'https://images.unsplash.com/photo-1511895426328-dc8714191300?q=80&w=800&auto=format&fit=crop', // Food/culture image
+    image: `${import.meta.env.BASE_URL}/images/travel_food_memory.png`, // Food/culture image
   },
   {
     title: 'The family fun list',
-    image: 'https://images.unsplash.com/photo-1502680390469-be75c86b636f?q=80&w=800&auto=format&fit=crop', // Surfing/fun image
+    image: `${import.meta.env.BASE_URL}/images/travel_adventure_memory.png`, // Surfing/fun image
   },
   {
     title: 'Unforgettable adventures',
-    image: '/images/Unforgettable adventures.jpeg', // Adventure image
+    image: `${import.meta.env.BASE_URL}/images/Unforgettable adventures.jpeg`, // Adventure image
   }
 ];
 

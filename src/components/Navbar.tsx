@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Phone, Menu, X } from 'lucide-react';
 import { NavLink, Link, useLocation } from 'react-router';
-
 const navLinks = [
   { label: 'HOME', href: '/' },
   { label: 'ABOUT', href: '/about' },
@@ -11,18 +10,8 @@ const navLinks = [
 ];
 
 const Navbar = () => {
-  const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const location = useLocation();
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 50);
-    };
-
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
 
   // Close mobile menu and scroll to top on route change
   useEffect(() => {
@@ -33,23 +22,53 @@ const Navbar = () => {
   return (
     <>
       <nav
-        className={`fixed top-0 left-0 right-0 z-50 h-[72px] flex items-center transition-all duration-300 ${
-          scrolled || location.pathname !== '/'
-            ? 'bg-teal/95 backdrop-blur-xl shadow-lg'
-            : 'bg-transparent'
-        }`}
+        className={`fixed top-0 left-0 right-0 z-50 h-[72px] flex items-center transition-all duration-300 bg-white shadow-sm`}
       >
         <div className="w-full max-w-[1280px] mx-auto px-6 flex items-center justify-between">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-2">
+          <Link to="/" className="flex items-center gap-3">
             <img
-              src="/images/logo-icon.png"
+              src={`${import.meta.env.BASE_URL}/images/logo-icon.png`}
               alt="Al Fawaz International Travels"
-              className="h-10 w-auto object-contain"
+              className="h-14 w-auto object-contain"
             />
-            <span className="hidden sm:block font-display font-semibold text-white text-lg">
-              AL FAWAZ
-            </span>
+
+            <div className="flex flex-col leading-none justify-center">
+              <span
+                className="uppercase text-teal text-2xl sm:text-[2rem]"
+                style={{
+                  fontFamily: "'Fredoka', sans-serif",
+                  fontWeight: 700,
+                  letterSpacing: "1px",
+                  lineHeight: 1,
+                }}
+              >
+                AL FAWAZ
+              </span>
+
+              <span
+                className="uppercase text-black text-xs sm:text-base mt-1"
+                style={{
+                  fontFamily: "'Bebas Neue', sans-serif",
+                  letterSpacing: "1.3px",
+                  lineHeight: 1,
+                }}
+              >
+                INTERNATIONAL TRAVELS
+              </span>
+
+              {/* <span
+                className="uppercase text-black"
+                style={{
+                  fontFamily: "'Bebas Neue', sans-serif",
+                  fontSize: "0.8rem",
+                  letterSpacing: "1px",
+                  lineHeight: 1,
+                }}
+              >
+                OMAN
+              </span> */}
+            </div>
           </Link>
 
           {/* Center Nav Links - Desktop */}
@@ -58,11 +77,10 @@ const Navbar = () => {
               <NavLink
                 key={link.href}
                 to={link.href}
-                className={({ isActive }) => `font-body font-medium text-[0.8125rem] tracking-[0.08em] uppercase transition-colors duration-200 relative pb-1 ${
-                  isActive
-                    ? 'text-amber-light'
-                    : 'text-white/80 hover:text-amber-light'
-                }`}
+                className={({ isActive }) => `font-body font-medium text-[0.8125rem] tracking-[0.08em] uppercase transition-colors duration-200 relative pb-1 ${isActive
+                  ? 'text-teal font-bold'
+                  : 'text-charcoal hover:text-teal'
+                  }`}
               >
                 {({ isActive }) => (
                   <>
@@ -89,7 +107,7 @@ const Navbar = () => {
             {/* Mobile hamburger */}
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="lg:hidden p-2 text-white hover:text-amber-light transition-colors"
+              className="lg:hidden p-2 text-charcoal hover:text-teal transition-colors"
               aria-label="Toggle menu"
             >
               {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -100,22 +118,40 @@ const Navbar = () => {
 
       {/* Mobile Menu Overlay */}
       <div
-        className={`fixed inset-0 z-40 bg-teal transition-all duration-500 lg:hidden ${
-          mobileMenuOpen
-            ? 'opacity-100 pointer-events-auto'
-            : 'opacity-0 pointer-events-none'
-        }`}
+        className={`fixed inset-0 z-[60] bg-teal transition-all duration-500 lg:hidden ${mobileMenuOpen
+          ? 'opacity-100 pointer-events-auto'
+          : 'opacity-0 pointer-events-none'
+          }`}
       >
-        <div className="flex flex-col items-center justify-center h-full gap-8">
+        {/* Close button in top-right */}
+        <div className="flex items-center justify-between px-6 h-[72px] border-b border-white/10">
+          <Link to="/" className="flex items-center gap-3" onClick={() => setMobileMenuOpen(false)}>
+            <img
+              src={`${import.meta.env.BASE_URL}/images/logo-icon.png`}
+              alt="Al Fawaz"
+              className="h-10 w-auto object-contain"
+            />
+            <span style={{ fontFamily: "'Fredoka', sans-serif", fontWeight: 700, fontSize: '1.5rem', letterSpacing: '1px', color: 'white' }}>
+              AL FAWAZ
+            </span>
+          </Link>
+          <button
+            onClick={() => setMobileMenuOpen(false)}
+            className="p-2 text-white hover:text-amber-light transition-colors"
+            aria-label="Close menu"
+          >
+            <X size={28} />
+          </button>
+        </div>
+
+        <div className="flex flex-col items-center justify-center h-[calc(100%-72px)] gap-8">
           {navLinks.map((link, i) => (
             <NavLink
               key={link.href}
               to={link.href}
-              className={({ isActive }) => `font-display text-2xl transition-colors duration-200 ${
-                isActive ? 'text-amber-light' : 'text-white hover:text-amber-light'
-              } ${
-                mobileMenuOpen ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'
-              }`}
+              className={({ isActive }) => `font-display text-2xl transition-colors duration-200 ${isActive ? 'text-amber-light' : 'text-white hover:text-amber-light'
+                } ${mobileMenuOpen ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'
+                }`}
               style={{ transitionDelay: `${i * 80}ms` }}
             >
               {link.label}

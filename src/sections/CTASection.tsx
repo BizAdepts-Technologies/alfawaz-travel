@@ -6,7 +6,7 @@ const CTASection = () => (
     style={{
       position: 'relative',
       minHeight: '600px',
-      background: 'url("/images/solo_travel_cta.png") center/cover no-repeat',
+      background: `url("${import.meta.env.BASE_URL}/images/solo_travel_cta.png") center/cover no-repeat`,
       display: 'flex',
       alignItems: 'center'
     }}
@@ -24,7 +24,7 @@ const CTASection = () => (
       width: '100%',
       maxWidth: '1280px',
       margin: '0 auto',
-      padding: '0 3rem'
+      padding: '0 clamp(1.5rem, 5vw, 3rem)'
     }}>
       <div style={{ maxWidth: '540px' }}>
         <h2 style={{

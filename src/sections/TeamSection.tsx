@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
 
 const team = [
-  { name: 'Nizamudheen', image: 'https://i.pravatar.cc/500?img=12' },
-  { name: 'Haneefa', image: 'https://i.pravatar.cc/500?img=32' },
-  { name: 'Roshan Abdul Jaleel', image: 'https://i.pravatar.cc/500?img=47' },
-  { name: 'Irfan Noufal', image: 'https://i.pravatar.cc/500?img=52' },
+  { name: 'Nizamudheen', image: `${import.meta.env.BASE_URL}/images/team_member_1.png` },
+  { name: 'Haneefa', image: `${import.meta.env.BASE_URL}/images/team_member_2.png` },
+  { name: 'Roshan Abdul Jaleel', image: `${import.meta.env.BASE_URL}/images/team_member_1.png` },
+  { name: 'Irfan Noufal', image: `${import.meta.env.BASE_URL}/images/team_member_2.png` },
   //   { name: 'Moosa Muringekal', image: 'https://i.pravatar.cc/500?img=66' },
 ];
 

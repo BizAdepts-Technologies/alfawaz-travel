@@ -17,16 +17,41 @@ const Footer = () => {
 
   return (
     <footer className="bg-teal-dark text-white">
-      <div className="max-w-[1280px] mx-auto px-6 pt-20 pb-10">
+      <div className="max-w-[1280px] mx-auto px-6 pt-2 md:pt-4 lg:pt-8 pb-4">
         {/* Main Footer Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 lg:gap-16 mb-12">
           {/* Column 1 - Company Info */}
           <div>
-            <img
-              src="/images/logo-icon.png"
-              alt="Al Fawaz International Travels"
-              className="h-14 w-auto object-contain mb-4"
-            />
+            <div className="flex items-center gap-3 mb-6">
+              <img
+                src={`${import.meta.env.BASE_URL}/images/logo-icon.png`}
+                alt="Al Fawaz International Travels"
+                className="h-12 w-auto object-contain"
+              />
+              <div className="flex flex-col leading-none justify-center">
+                <span
+                  className="uppercase text-white text-2xl sm:text-[1.75rem]"
+                  style={{
+                    fontFamily: "'Fredoka', sans-serif",
+                    fontWeight: 700,
+                    letterSpacing: "1px",
+                    lineHeight: 1,
+                  }}
+                >
+                  AL FAWAZ
+                </span>
+                <span
+                  className="uppercase text-white/80 text-xs sm:text-sm mt-1"
+                  style={{
+                    fontFamily: "'Bebas Neue', sans-serif",
+                    letterSpacing: "1.3px",
+                    lineHeight: 1,
+                  }}
+                >
+                  INTERNATIONAL TRAVELS
+                </span>
+              </div>
+            </div>
             <p className="text-white/70 font-body text-sm leading-relaxed max-w-xs">
               Al Fawaz International Travels — Your trusted travel partner since 1989.
               IATA-approved agency based in Salalah & Duqm, Oman.

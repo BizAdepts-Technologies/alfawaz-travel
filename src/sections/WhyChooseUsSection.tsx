@@ -30,10 +30,10 @@ const features = [
 ];
 
 const destinations = [
-  { image: '/images/dest-salalah.jpg', name: 'Salalah' },
-  { image: '/images/dest-muscat.jpg', name: 'Muscat' },
-  { image: '/images/dest-dubai.jpg', name: 'Dubai' },
-  { image: '/images/dest-maldives.jpg', name: 'Maldives' },
+  { image: `${import.meta.env.BASE_URL}/images/dest-salalah.jpg`, name: 'Salalah' },
+  { image: `${import.meta.env.BASE_URL}/images/dest-muscat.jpg`, name: 'Muscat' },
+  { image: `${import.meta.env.BASE_URL}/images/dest-dubai.jpg`, name: 'Dubai' },
+  { image: `${import.meta.env.BASE_URL}/images/dest-maldives.jpg`, name: 'Maldives' },
 ];
 
 const WhyChooseUsSection = () => {

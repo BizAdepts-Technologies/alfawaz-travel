@@ -11,20 +11,20 @@ interface Package {
 
 const packages: Package[] = [
   // Summer (departures outbound from Oman)
-  { name: 'Maldives Beach Retreat — Departures from Oman', image: '/images/seasonal/Maldives Summer.jpeg', days: 6, season: 'summer' },
-  { name: 'Dubai City & Desert Safari — From Muscat', image: '/images/seasonal/Dubai Summer.jpeg', days: 5, season: 'summer' },
-  { name: 'Muscat Heritage & Coastal (Short Escape)', image: '/images/seasonal/Muscat Summer.jpeg', days: 4, season: 'summer' },
-  { name: 'Salalah Summer & Beaches — Outbound Options', image: '/images/seasonal/Salalah Summer.jpeg', days: 7, season: 'summer' },
+  { name: 'Maldives Beach Retreat — Departures from Oman', image: `${import.meta.env.BASE_URL}/images/seasonal/Maldives Summer.jpeg`, days: 6, season: 'summer' },
+  { name: 'Dubai City & Desert Safari — From Muscat', image: `${import.meta.env.BASE_URL}/images/seasonal/Dubai Summer.jpeg`, days: 5, season: 'summer' },
+  { name: 'Muscat Heritage & Coastal (Short Escape)', image: `${import.meta.env.BASE_URL}/images/seasonal/Muscat Summer.jpeg`, days: 4, season: 'summer' },
+  { name: 'Salalah Summer & Beaches — Outbound Options', image: `${import.meta.env.BASE_URL}/images/seasonal/Salalah Summer.jpeg`, days: 7, season: 'summer' },
   // Winter (ideal outbound windows)
-  { name: 'Dubai Winter Festival — Fly from Oman', image: '/images/seasonal/Dubai Winter.jpeg', days: 5, season: 'winter' },
-  { name: 'Muscat Winter Cultural Journey', image: '/images/seasonal/Muscat Winter.jpeg', days: 4, season: 'winter' },
-  { name: 'Maldives Romantic Winter Getaway — Depart from Oman', image: '/images/seasonal/Maldives winter.jpeg', days: 6, season: 'winter' },
-  { name: 'Salalah Winter & Desert Escapes', image: '/images/seasonal/Salalah Winter.jpeg', days: 5, season: 'winter' },
+  { name: 'Dubai Winter Festival — Fly from Oman', image: `${import.meta.env.BASE_URL}/images/seasonal/Dubai Winter.jpeg`, days: 5, season: 'winter' },
+  { name: 'Muscat Winter Cultural Journey', image: `${import.meta.env.BASE_URL}/images/seasonal/Muscat Winter.jpeg`, days: 4, season: 'winter' },
+  { name: 'Maldives Romantic Winter Getaway — Depart from Oman', image: `${import.meta.env.BASE_URL}/images/seasonal/Maldives winter.jpeg`, days: 6, season: 'winter' },
+  { name: 'Salalah Winter & Desert Escapes', image: `${import.meta.env.BASE_URL}/images/seasonal/Salalah Winter.jpeg`, days: 5, season: 'winter' },
   // Monsoon / Khareef (seasonal outbound highlights)
-  { name: 'Salalah Khareef & Monsoon Tour — Departures from Oman', image: '/images/seasonal/Salalah Monsoon.jpeg', days: 8, season: 'monsoon' },
-  { name: 'Maldives Monsoon Diving Special — From Oman', image: '/images/seasonal/Maldives Monsoon.jpeg', days: 5, season: 'monsoon' },
-  { name: 'Muscat Monsoon Coastal Escape', image: '/images/seasonal/Muscat Monsoon.jpeg', days: 4, season: 'monsoon' },
-  { name: 'Dubai Monsoon City Break — Short Flights', image: '/images/seasonal/Dubai Monsoon.jpeg', days: 3, season: 'monsoon' },
+  { name: 'Salalah Khareef & Monsoon Tour — Departures from Oman', image: `${import.meta.env.BASE_URL}/images/seasonal/Salalah Monsoon.jpeg`, days: 8, season: 'monsoon' },
+  { name: 'Maldives Monsoon Diving Special — From Oman', image: `${import.meta.env.BASE_URL}/images/seasonal/Maldives Monsoon.jpeg`, days: 5, season: 'monsoon' },
+  { name: 'Muscat Monsoon Coastal Escape', image: `${import.meta.env.BASE_URL}/images/seasonal/Muscat Monsoon.jpeg`, days: 4, season: 'monsoon' },
+  { name: 'Dubai Monsoon City Break — Short Flights', image: `${import.meta.env.BASE_URL}/images/seasonal/Dubai Monsoon.jpeg`, days: 3, season: 'monsoon' },
 ];
 
 const seasonConfig: Record<Season, { label: string; icon: string; heading: string; description: string }> = {
@@ -147,7 +147,7 @@ const SeasonalPackagesSection = () => {
       <div style={{
         position: 'absolute',
         inset: 0,
-        backgroundImage: 'url("/images/seasonal-bg.png")',
+        backgroundImage: `url(${import.meta.env.BASE_URL}images/seasonal-bg.png)`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         zIndex: 0,

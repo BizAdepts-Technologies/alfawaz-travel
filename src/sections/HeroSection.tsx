@@ -16,8 +16,9 @@ const HeroSection = () => {
       id="hero"
       ref={heroRef}
       style={{
-        height: '100dvh',
-        paddingTop: '40px',
+        minHeight: '100dvh',
+        paddingTop: 'calc(72px + 2rem)',
+        paddingBottom: '4rem',
         background: 'linear-gradient(160deg, #032828 0%, #054545 40%, #0A6B6B 70%, #0F8B8B 100%)',
         display: 'flex',
         alignItems: 'center',
@@ -224,7 +225,7 @@ const HeroSection = () => {
       <div style={{ position: 'relative', zIndex: 10, width: '100%', maxWidth: '1200px', margin: '0 auto', padding: '0 2rem', display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '3rem', flexWrap: 'wrap' }}>
 
         {/* Left: Text Content */}
-        <div style={{ flex: '1 1 380px', minWidth: '280px' }}>
+        <div style={{ flex: '1 1 380px', minWidth: '280px', transform: 'translateY(-30px)', }}>
 
           <h1
             data-animate
@@ -257,7 +258,7 @@ const HeroSection = () => {
               marginBottom: '2.5rem',
             }}
           >
-            Your trusted travel partner in Salalah &amp; Duqm — crafting extraordinary journeys, seamless flights, and unforgettable experiences since 1989.
+            Your trusted travel partner in Oman crafting extraordinary journeys, seamless flights, and unforgettable experiences since 1989.
           </p>
 
           <div data-animate style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', alignItems: 'center' }}>
@@ -298,7 +299,7 @@ const HeroSection = () => {
 
         {/* Right: Realistic Globe & Floating Cards */}
         <div data-animate style={{ flex: '1 1 420px', display: 'flex', justifyContent: 'center', alignItems: 'center', position: 'relative', minHeight: '480px' }}>
-          
+
           {/* Orbital rings */}
           <div style={{ position: 'absolute', top: '50%', left: '50%', marginTop: '-240px', marginLeft: '-240px', width: '480px', height: '480px', border: '1px solid rgba(255,255,255,0.08)', borderRadius: '50%', transform: 'rotateX(60deg) rotateY(15deg)', animation: 'globe-spin 25s linear infinite' }} />
           <div style={{ position: 'absolute', top: '50%', left: '50%', marginTop: '-280px', marginLeft: '-280px', width: '560px', height: '560px', border: '1px dashed rgba(232, 145, 42, 0.25)', borderRadius: '50%', transform: 'rotateX(75deg) rotateY(-15deg)', animation: 'globe-spin 35s linear infinite reverse' }} />
@@ -308,7 +309,7 @@ const HeroSection = () => {
             <svg width="200" height="120" viewBox="0 0 200 120" style={{ filter: 'drop-shadow(0 10px 10px rgba(0,0,0,0.5))' }}>
               {/* Land / Island base */}
               <path d="M 20 100 Q 100 120 180 100 Q 195 90 170 85 Q 100 70 30 85 Q 5 90 20 100 Z" fill="#2ECC71" stroke="#27AE60" strokeWidth="2" />
-              
+
               {/* Mountains */}
               <path d="M 40 85 L 70 30 L 100 85 Z" fill="#95A5A6" stroke="#7F8C8D" strokeWidth="1.5" />
               <path d="M 70 85 L 110 20 L 150 85 Z" fill="#BDC3C7" stroke="#95A5A6" strokeWidth="1.5" />
@@ -360,11 +361,11 @@ const HeroSection = () => {
           {/* Realistic Earth Globe */}
           <div style={{
             position: 'relative',
-            width: '380px',
-            height: '380px',
+            width: 'min(100%, 380px)',
+            aspectRatio: '1 / 1',
             borderRadius: '50%',
             boxShadow: 'inset -30px -30px 50px rgba(0,0,0,0.85), inset 15px 15px 35px rgba(255,255,255,0.35), 0 0 60px rgba(10,107,107,0.5)',
-            background: 'url("/images/earth-map.jpg") repeat-x',
+            background: `url("${import.meta.env.BASE_URL}/images/glob.png")`,
             backgroundSize: '760px 100%',
             animation: 'globe-spin-bg 45s linear infinite',
             transform: 'rotate(15deg)'
@@ -419,7 +420,7 @@ const HeroSection = () => {
             animation: 'float-card-2 7s ease-in-out infinite 1s',
             zIndex: 20
           }}>
-             <div style={{ display: 'flex', alignItems: 'center', gap: '14px' }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '14px' }}>
               <div style={{ width: '42px', height: '42px', background: 'linear-gradient(135deg, #06D6A0, #048A68)', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '1.2rem', boxShadow: '0 4px 12px rgba(6, 214, 160, 0.4)' }}>🌴</div>
               <div>
                 <div style={{ fontFamily: "'Outfit', sans-serif", fontSize: '0.7rem', color: 'rgba(255,255,255,0.6)', textTransform: 'uppercase', letterSpacing: '0.12em', marginBottom: '2px' }}>Trending</div>

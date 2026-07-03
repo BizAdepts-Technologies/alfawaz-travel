@@ -62,7 +62,7 @@ module.exports = {
         'whatsapp-dark': '#128C7E',
       },
       fontFamily: {
-        display: ['"Playfair Display"', 'Georgia', 'serif'],
+        display: ['"Fredoka"', 'Georgia', 'serif'],
         body: ['Inter', 'system-ui', 'sans-serif'],
       },
       borderRadius: {

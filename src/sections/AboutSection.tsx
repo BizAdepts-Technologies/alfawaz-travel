@@ -95,7 +95,7 @@ const AboutSection = () => {
 
             <div ref={imageRef} className="relative z-10 rounded-2xl overflow-hidden shadow-image">
               <img
-                src="/images/about-building.jpg"
+                src={`${import.meta.env.BASE_URL}images/about-building.jpg`}
                 alt="Al Fawaz International Travels Office"
                 className="w-full h-auto object-cover"
                 loading="lazy"

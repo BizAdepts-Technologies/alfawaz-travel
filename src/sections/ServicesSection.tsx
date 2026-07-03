@@ -9,42 +9,42 @@ gsap.registerPlugin(ScrollTrigger);
 
 const services = [
   {
-    image: '/images/service-flights.jpg',
+    image: `${import.meta.env.BASE_URL}/images/service-flights.jpg`,
     icon: Plane,
     title: 'Air Ticket Reservation',
     description:
       'Let us take care of your airline reservation, ensuring a smooth and hassle-free travel experience. We work with all major airlines to offer you a wide selection of flights, ensuring comfort and convenience to your destination.',
   },
   {
-    image: '/images/service-tours.jpg',
+    image: `${import.meta.env.BASE_URL}/images/service-tours.jpg`,
     icon: MapPin,
     title: 'Tour Packages',
     description:
       'Experience the world through our carefully crafted tour packages. Whether you desire cultural exploration, adventure-filled journeys, or luxurious getaways, we have a wide selection to suit your interests.',
   },
   {
-    image: '/images/service-hotels.jpg',
+    image: `${import.meta.env.BASE_URL}/images/service-hotels.jpg`,
     icon: Hotel,
     title: 'Hotel Booking',
     description:
       "Our agency partners with a vast network of hotels worldwide. Whether you're looking for budget-friendly options or luxury accommodations, we assist in finding the perfect hotel within your budget.",
   },
   {
-    image: '/images/service-hajj.jpg',
+    image: `${import.meta.env.BASE_URL}/images/service-hajj.jpg`,
     icon: Moon,
     title: 'Hajj & Umrah Packages',
     description:
       'We specialize in providing hassle-free Umrah and Hajj packages. Our services include visa assistance, accommodation arrangements, and transportation coordination for a smooth religious journey.',
   },
   {
-    image: '/images/service-visa.jpg',
+    image: `${import.meta.env.BASE_URL}/images/service-visa.jpg`,
     icon: FileText,
     title: 'Visa Services',
     description:
       'We offer visa assistance for various destinations. Our team guides you through the application process, ensuring you have all necessary documentation for a successful visa application.',
   },
   {
-    image: '/images/service-insurance.jpg',
+    image: `${import.meta.env.BASE_URL}/images/service-insurance.jpg`,
     icon: Shield,
     title: 'Travel Insurance',
     description:
