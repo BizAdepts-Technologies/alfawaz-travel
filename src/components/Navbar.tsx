@@ -33,42 +33,11 @@ const Navbar = () => {
               className="h-14 w-auto object-contain"
             />
 
-            <div className="flex flex-col leading-none justify-center">
-              <span
-                className="uppercase text-teal text-2xl sm:text-[2rem]"
-                style={{
-                  fontFamily: "'Fredoka', sans-serif",
-                  fontWeight: 700,
-                  letterSpacing: "1px",
-                  lineHeight: 1,
-                }}
-              >
-                AL FAWAZ
-              </span>
-
-              <span
-                className="uppercase text-black text-xs sm:text-base mt-1"
-                style={{
-                  fontFamily: "'Bebas Neue', sans-serif",
-                  letterSpacing: "1.3px",
-                  lineHeight: 1,
-                }}
-              >
-                INTERNATIONAL TRAVELS
-              </span>
-
-              {/* <span
-                className="uppercase text-black"
-                style={{
-                  fontFamily: "'Bebas Neue', sans-serif",
-                  fontSize: "0.8rem",
-                  letterSpacing: "1px",
-                  lineHeight: 1,
-                }}
-              >
-                OMAN
-              </span> */}
-            </div>
+            <img
+              src={`${import.meta.env.BASE_URL}/images/company%20name.jpeg`}
+              alt="Al Fawaz company name"
+              className="h-14 w-auto object-contain max-w-[240px]"
+            />
           </Link>
 
           {/* Center Nav Links - Desktop */}
@@ -131,9 +100,14 @@ const Navbar = () => {
               alt="Al Fawaz"
               className="h-10 w-auto object-contain"
             />
-            <span style={{ fontFamily: "'Fredoka', sans-serif", fontWeight: 700, fontSize: '1.5rem', letterSpacing: '1px', color: 'white' }}>
-              AL FAWAZ
-            </span>
+            <div className="flex flex-col leading-none justify-center">
+              <span style={{ fontFamily: "'Baloo 2', cursive", fontWeight: 800, fontSize: '1.3rem', letterSpacing: '-0.04em', color: 'white', lineHeight: 0.95 }}>
+                AL FAWAZ
+              </span>
+              <span style={{ fontFamily: "'Bebas Neue', sans-serif", fontWeight: 400, fontSize: '0.85rem', letterSpacing: '1px', color: 'white', lineHeight: 1 }}>
+                INTERNATIONAL TRAVELS
+              </span>
+            </div>
           </Link>
           <button
             onClick={() => setMobileMenuOpen(false)}
