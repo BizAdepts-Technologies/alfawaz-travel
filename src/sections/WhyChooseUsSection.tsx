@@ -103,7 +103,7 @@ const WhyChooseUsSection = () => {
     <section ref={sectionRef} id="whyus" className="section-padding bg-cream">
       <div className="max-w-[1280px] mx-auto px-6">
         {/* Row 1: Features + Destination Collage */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 items-start">
           {/* Left - Features */}
           <div ref={featuresRef}>
             <span className="feature-item section-label block mb-3">WHY AL FAWAZ</span>

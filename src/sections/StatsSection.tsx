@@ -51,7 +51,7 @@ const StatsSection = () => {
   return (
     <section ref={sectionRef} className="bg-teal py-12 md:py-14">
       <div className="max-w-[1280px] mx-auto px-6">
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-6">
           {stats.map((stat, i) => (
             <div key={stat.label} className="text-center">
               <div

@@ -17,9 +17,9 @@ const Footer = () => {
 
   return (
     <footer className="bg-teal-dark text-white">
-      <div className="max-w-[1280px] mx-auto px-6 pt-2 md:pt-4 lg:pt-8 pb-4">
+      <div className="max-w-[1280px] mx-auto px-6 pt-8 pb-4">
         {/* Main Footer Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 lg:gap-16 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10 mb-8">
           {/* Column 1 - Company Info */}
           <div>
             <div className="flex items-center gap-3 mb-6">
@@ -60,8 +60,8 @@ const Footer = () => {
 
           {/* Column 2 - Quick Links */}
           <div>
-            <h4 className="font-display font-semibold text-lg mb-4">Quick Links</h4>
-            <ul className="space-y-3">
+            <h4 className="font-display font-semibold text-lg mb-3">Quick Links</h4>
+            <ul className="space-y-2">
               {quickLinks.map((link) => (
                 <li key={link.href}>
                   <a
@@ -78,8 +78,8 @@ const Footer = () => {
 
           {/* Column 3 - Contact Info */}
           <div>
-            <h4 className="font-display font-semibold text-lg mb-4">Contact Us</h4>
-            <div className="space-y-4">
+            <h4 className="font-display font-semibold text-lg mb-3">Contact Us</h4>
+            <div className="space-y-3">
               <div className="flex items-start gap-3">
                 <MapPin size={18} className="text-amber mt-0.5 shrink-0" />
                 <p className="text-white/70 font-body text-sm">
@@ -104,7 +104,7 @@ const Footer = () => {
             </div>
 
             {/* Social Icons */}
-            <div className="flex items-center gap-3 mt-6">
+            <div className="flex items-center gap-3 mt-4">
               <a
                 href="https://wa.me/96899490108"
                 target="_blank"
@@ -144,7 +144,7 @@ const Footer = () => {
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-white/10 pt-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div className="border-t border-white/10 pt-4 mt-2 flex flex-col sm:flex-row items-center justify-between gap-3">
           <p className="text-white/50 font-body text-xs">
             &copy; 2024 Al Fawaz International Travels. All rights reserved.
           </p>
