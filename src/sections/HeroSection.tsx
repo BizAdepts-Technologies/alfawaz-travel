@@ -181,13 +181,14 @@ const HeroSection = () => {
         }
 
         @media (max-width: 600px) {
-          .hs-hero { height: auto !important; max-height: none !important; min-height: 100dvh; padding: calc(64px + 1rem) 0 1.5rem; }
+          .hs-hero { height: auto !important; max-height: none !important; min-height: auto !important; padding-bottom: 3.5rem !important; }
           .hs-shift { transform: none; padding-top: 0; }
           .hs-hero {
             --w-outer: 40px; --h-outer: 200px;
             --w-inner: 44px; --h-inner: 176px;
             --w-center: 100%; --h-center: 190px;
             --row-gap: 8px; --row-pad: 16px;
+            --outer-shift: 0px;
           }
           .hs-pillar-row { flex-wrap: wrap !important; row-gap: 16px !important; }
           .hs-pillar-col.is-center { order: -1; flex-basis: 100% !important; max-width: 420px !important; margin: 0 auto 8px; }
@@ -262,7 +263,7 @@ const HeroSection = () => {
                     flexDirection: 'column',
                     alignItems: 'center',
                     gap: '2.5rem',
-                    transform: p.size === 'outer' ? 'translateY(-10vh)' : p.size === 'inner' ? 'translateY(0)' : 'translateY(0)',
+                    transform: p.size === 'outer' ? 'translateY(var(--outer-shift, -10vh))' : p.size === 'inner' ? 'translateY(0)' : 'translateY(0)',
                     transition: 'transform 0.4s ease',
                   }}
                 >
