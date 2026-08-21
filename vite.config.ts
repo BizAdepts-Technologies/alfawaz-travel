@@ -3,7 +3,7 @@ import react from "@vitejs/plugin-react";
 import { defineConfig } from "vite";
 
 export default defineConfig({
-  base: "/alfawaz-travel-agency/",
+  base: "/alfawaz-travel/",
   plugins: [react()],
   resolve: {
     alias: {

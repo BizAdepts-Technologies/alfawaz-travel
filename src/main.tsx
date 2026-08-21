@@ -12,7 +12,7 @@ import App from './App.tsx'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <BrowserRouter basename="/alfawaz-travel-agency">
+    <BrowserRouter basename="/alfawaz-travel">
       <App />
     </BrowserRouter>
   </StrictMode>,
