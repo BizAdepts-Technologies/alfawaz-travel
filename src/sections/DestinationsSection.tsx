@@ -1,4 +1,5 @@
 import { useState, useRef, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 const destinations = [
   {
@@ -157,17 +158,21 @@ const DestinationsSection = () => {
               <em style={{ color: '#C27D1E' }}>Await You</em>
             </h2>
           </div>
-          <a href="#contact" style={{
-            fontFamily: "'Outfit', sans-serif",
-            fontSize: '0.85rem',
-            fontWeight: 500,
-            color: '#1a2340',
-            textDecoration: 'none',
-            borderBottom: '1.5px solid #f59e0b',
-            paddingBottom: '2px',
-          }}>
+          <Link
+            to="/contact"
+            onClick={() => window.scrollTo(0, 0)}
+            style={{
+              fontFamily: "'Outfit', sans-serif",
+              fontSize: '0.85rem',
+              fontWeight: 500,
+              color: '#1a2340',
+              textDecoration: 'none',
+              borderBottom: '1.5px solid #f59e0b',
+              paddingBottom: '2px',
+            }}
+          >
             View All Destinations →
-          </a>
+          </Link>
         </div>
 
         {/* Carousel */}
@@ -257,9 +262,13 @@ const DestinationsSection = () => {
                     }} />
 
                     {/* Read More Button */}
-                    <a href="#contact" className="dest-read-more">
+                    <Link
+                      to="/contact"
+                      className="dest-read-more"
+                      onClick={() => window.scrollTo(0, 0)}
+                    >
                       Read More
-                    </a>
+                    </Link>
                   </div>
                 </div>
               ))}

@@ -1,19 +1,15 @@
 import { MapPin, Phone, Mail, Facebook, Instagram } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   const quickLinks = [
-    { label: 'Home', href: '#hero' },
-    { label: 'About', href: '#about' },
-    { label: 'Services', href: '#services' },
-    { label: 'Why Us', href: '#whyus' },
-    { label: 'Contact', href: '#contact' },
+    { label: 'Home', href: '/' },
+    { label: 'About', href: '/about' },
+    { label: 'Services', href: '/services' },
+    { label: 'Why Us', href: '/why-us' },
+    { label: 'Contact', href: '/contact' },
   ];
 
-  const handleClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
-    e.preventDefault();
-    const el = document.querySelector(href);
-    if (el) el.scrollIntoView({ behavior: 'smooth' });
-  };
 
   return (
     <footer className="bg-teal-dark text-white">
@@ -26,31 +22,13 @@ const Footer = () => {
               <img
                 src={`${import.meta.env.BASE_URL}/images/logo-icon.png`}
                 alt="Al Fawaz International Travels"
+                className="h-12 w-auto object-contain rounded-[3px]"
+              />
+              <img
+                src={`${import.meta.env.BASE_URL}/images/company_name_footer.png`}
+                alt="Al Fawaz International Travels Text"
                 className="h-12 w-auto object-contain"
               />
-              <div className="flex flex-col leading-none justify-center">
-                <span
-                  className="uppercase text-white text-2xl sm:text-[1.75rem]"
-                  style={{
-                    fontFamily: "'Fredoka', sans-serif",
-                    fontWeight: 700,
-                    letterSpacing: "1px",
-                    lineHeight: 1,
-                  }}
-                >
-                  AL FAWAZ
-                </span>
-                <span
-                  className="uppercase text-white/80 text-xs sm:text-sm mt-1"
-                  style={{
-                    fontFamily: "'Bebas Neue', sans-serif",
-                    letterSpacing: "1.3px",
-                    lineHeight: 1,
-                  }}
-                >
-                  INTERNATIONAL TRAVELS
-                </span>
-              </div>
             </div>
             <p className="text-white/70 font-body text-sm leading-relaxed max-w-xs">
               Al Fawaz International Travels — Your trusted travel partner since 1989.
@@ -64,13 +42,13 @@ const Footer = () => {
             <ul className="space-y-2">
               {quickLinks.map((link) => (
                 <li key={link.href}>
-                  <a
-                    href={link.href}
-                    onClick={(e) => handleClick(e, link.href)}
+                  <Link
+                    to={link.href}
+                    onClick={() => window.scrollTo(0, 0)}
                     className="text-white/70 hover:text-white font-body text-sm transition-colors duration-200"
                   >
                     {link.label}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>

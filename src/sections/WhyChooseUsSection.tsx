@@ -1,4 +1,5 @@
 import { useRef } from 'react';
+import { Link } from 'react-router-dom';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useGSAP } from '@gsap/react';
@@ -94,10 +95,6 @@ const WhyChooseUsSection = () => {
     }
   }, { scope: sectionRef });
 
-  const handleContactClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    e.preventDefault();
-    document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' });
-  };
 
   return (
     <section ref={sectionRef} id="whyus" className="section-padding bg-cream">
@@ -174,13 +171,13 @@ const WhyChooseUsSection = () => {
                 Let our experts craft your perfect travel experience.
               </p>
             </div>
-            <a
-              href="#contact"
-              onClick={handleContactClick}
+            <Link
+              to="/contact"
+              onClick={() => window.scrollTo(0, 0)}
               className="btn-primary shrink-0"
             >
               Contact Us
-            </a>
+            </Link>
           </div>
         </div>
       </div>

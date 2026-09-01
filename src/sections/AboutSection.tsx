@@ -1,4 +1,5 @@
 import { useRef } from 'react';
+import { Link } from 'react-router-dom';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useGSAP } from '@gsap/react';
@@ -41,10 +42,6 @@ const AboutSection = () => {
     });
   }, { scope: sectionRef });
 
-  const handleCtaClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    e.preventDefault();
-    document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' });
-  };
 
   return (
     <section
@@ -78,13 +75,13 @@ const AboutSection = () => {
               and excellence. We have cultivated strong partnerships with renowned airlines, hotels,
               and transportation providers worldwide.
             </p>
-            <a
-              href="#contact"
-              onClick={handleCtaClick}
+            <Link
+              to="/contact"
+              onClick={() => window.scrollTo(0, 0)}
               className="animate-in btn-secondary"
             >
               Get in Touch
-            </a>
+            </Link>
           </div>
 
           {/* Image Column */}

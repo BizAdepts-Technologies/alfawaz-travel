@@ -215,7 +215,7 @@ const HeroSection = () => {
                 margin: 0,
               }}
             >
-              Let&rsquo;s Travel the World with Us.
+              Your Trusted Travel Partner
             </h1>
             <p
               style={{

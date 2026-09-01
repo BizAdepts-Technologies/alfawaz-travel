@@ -1,11 +1,13 @@
 import { ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const CTASection = () => (
   <section
     id="cta"
     style={{
       position: 'relative',
-      minHeight: '600px',
+      minHeight: '280px',
+      padding: '3rem 0',
       background: `url("${import.meta.env.BASE_URL}/images/solo_travel_cta.png") center/cover no-repeat`,
       display: 'flex',
       alignItems: 'center'
@@ -45,14 +47,15 @@ const CTASection = () => (
           fontWeight: 300,
           color: 'rgba(255, 255, 255, 0.9)',
           lineHeight: 1.7,
-          marginBottom: '2.5rem',
+          marginBottom: '1.5rem',
           maxWidth: '480px'
         }}>
           Get ready for an unforgettable adventure with Al Fawaz Travels – with everything at your fingertips, from the best local restaurants and convenient transport, to the most stunning sights in Salalah, Duqm, and beyond.
         </p>
 
-        <a
-          href="#contact"
+        <Link
+          to="/contact"
+          onClick={() => window.scrollTo(0, 0)}
           style={{
             display: 'inline-flex',
             alignItems: 'center',
@@ -73,7 +76,7 @@ const CTASection = () => (
         >
           Plan your trip
           <ArrowRight size={20} strokeWidth={2.5} />
-        </a>
+        </Link>
       </div>
     </div>
   </section>
