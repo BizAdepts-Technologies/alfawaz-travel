@@ -160,32 +160,36 @@ const ContactSection = () => {
               <div className="space-y-5 mb-8">
                 <div className="flex items-start gap-3">
                   <MapPin size={20} className="text-teal mt-0.5 shrink-0" />
-                  <p className="font-body text-sm text-charcoal-light">
+                  <a 
+                    href="https://maps.google.com/?q=Al+Fawaz+International+Travels+Salalah" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="font-body text-sm text-charcoal-light hover:text-teal transition-colors block"
+                  >
                     Al Nahda Street, Opp. Old Police Station,<br />
                     Salalah, P.B No. 1242
-                  </p>
+                  </a>
                 </div>
 
                 <div className="flex items-start gap-3">
                   <Phone size={20} className="text-teal mt-0.5 shrink-0" />
                   <div className="font-body text-sm text-charcoal-light">
-                    <p>+968 2328 8974 (Office)</p>
-                    <p>+968 9949 0108 (Mobile)</p>
+                    <p><a href="tel:+96823288974" className="hover:text-teal transition-colors">+968 2328 8974 (Office)</a></p>
+                    <p><a href="tel:+96871546555" className="hover:text-teal transition-colors">+968 71546555 (Mobile)</a></p>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-3">
                   <Mail size={20} className="text-teal mt-0.5 shrink-0" />
                   <div className="font-body text-sm text-charcoal-light">
-                    <p>gm@alfawaztravel.com</p>
-                    <p>sales@alfawaztravel.com</p>
+                    <p><a href="mailto:accounts@alfawaztravel.com" className="hover:text-teal transition-colors">accounts@alfawaztravel.com</a></p>
                   </div>
                 </div>
               </div>
 
               {/* WhatsApp CTA */}
               <a
-                href="https://wa.me/96899490108"
+                href="https://wa.me/96871546555"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="block bg-whatsapp rounded-2xl p-5 text-center transition-all duration-300 hover:bg-whatsapp-dark hover:-translate-y-0.5 mb-6"

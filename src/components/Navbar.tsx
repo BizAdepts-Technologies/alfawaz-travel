@@ -66,11 +66,11 @@ const Navbar = () => {
           {/* Right - Call Button (Desktop) + Hamburger (Mobile) */}
           <div className="flex items-center gap-4">
             <a
-              href="tel:+96899490108"
+              href="tel:+96871546555"
               className="hidden md:inline-flex items-center gap-2 px-5 py-2.5 bg-amber text-charcoal font-body font-semibold text-sm rounded-full hover:bg-amber-light transition-all duration-300 hover:-translate-y-0.5"
             >
               <Phone size={16} />
-              <span>+968 9949 0108</span>
+              <span>+968 71546555</span>
             </a>
 
             {/* Mobile hamburger */}
@@ -132,11 +132,11 @@ const Navbar = () => {
             </NavLink>
           ))}
           <a
-            href="tel:+96899490108"
+            href="tel:+96871546555"
             className="mt-6 inline-flex items-center gap-2 px-8 py-3 bg-amber text-charcoal font-body font-semibold rounded-full"
           >
             <Phone size={18} />
-            <span>+968 9949 0108</span>
+            <span>+968 71546555</span>
           </a>
         </div>
       </div>

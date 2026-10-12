@@ -1,6 +1,7 @@
 import { Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+import CallWidget from './components/CallWidget';
 import HomePage from './pages/HomePage';
 import AboutPage from './pages/AboutPage';
 import ServicesPage from './pages/ServicesPage';
@@ -20,6 +21,7 @@ const App = () => {
           <Route path="/contact" element={<ContactPage />} />
         </Routes>
       </main>
+      <CallWidget />
       <Footer />
     </div>
   );

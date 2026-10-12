@@ -60,23 +60,27 @@ const Footer = () => {
             <div className="space-y-3">
               <div className="flex items-start gap-3">
                 <MapPin size={18} className="text-amber mt-0.5 shrink-0" />
-                <p className="text-white/70 font-body text-sm">
+                <a 
+                  href="https://maps.google.com/?q=Al+Fawaz+International+Travels+Salalah" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-white/70 font-body text-sm hover:text-white transition-colors block"
+                >
                   Al Nahda Street, Opp. Old Police Station,<br />
                   Salalah, P.B No. 1242
-                </p>
+                </a>
               </div>
               <div className="flex items-center gap-3">
                 <Phone size={18} className="text-amber shrink-0" />
                 <div className="text-white/70 font-body text-sm">
-                  <p>+968 2328 8974 (Office)</p>
-                  <p>+968 9949 0108 (Mobile)</p>
+                  <p><a href="tel:+96823288974" className="hover:text-white transition-colors">+968 2328 8974 (Office)</a></p>
+                  <p><a href="tel:+96871546555" className="hover:text-white transition-colors">+968 71546555 (Mobile)</a></p>
                 </div>
               </div>
               <div className="flex items-start gap-3">
                 <Mail size={18} className="text-amber mt-0.5 shrink-0" />
                 <div className="text-white/70 font-body text-sm">
-                  <p>gm@alfawaztravel.com</p>
-                  <p>sales@alfawaztravel.com</p>
+                  <p><a href="mailto:accounts@alfawaztravel.com" className="hover:text-white transition-colors">accounts@alfawaztravel.com</a></p>
                 </div>
               </div>
             </div>
@@ -84,7 +88,7 @@ const Footer = () => {
             {/* Social Icons */}
             <div className="flex items-center gap-3 mt-4">
               <a
-                href="https://wa.me/96899490108"
+                href="https://wa.me/96871546555"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-9 h-9 rounded-full border border-white/30 flex items-center justify-center hover:bg-whatsapp hover:border-whatsapp transition-all duration-300"
@@ -95,27 +99,22 @@ const Footer = () => {
                 </svg>
               </a>
               <a
-                href="#"
+                href="https://www.facebook.com/alfawaztravels/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-9 h-9 rounded-full border border-white/30 flex items-center justify-center hover:bg-amber hover:border-amber hover:text-charcoal transition-all duration-300"
                 aria-label="Facebook"
               >
                 <Facebook size={16} />
               </a>
               <a
-                href="#"
+                href="https://www.instagram.com/alfawaz_intl?stkn=ajlzNGw2MGM5YnZh&utm_source=qr"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-9 h-9 rounded-full border border-white/30 flex items-center justify-center hover:bg-amber hover:border-amber hover:text-charcoal transition-all duration-300"
                 aria-label="Instagram"
               >
                 <Instagram size={16} />
-              </a>
-              <a
-                href="#"
-                className="w-9 h-9 rounded-full border border-white/30 flex items-center justify-center hover:bg-amber hover:border-amber hover:text-charcoal transition-all duration-300"
-                aria-label="X"
-              >
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
-                </svg>
               </a>
             </div>
           </div>
