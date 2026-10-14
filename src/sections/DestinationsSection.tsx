@@ -4,32 +4,32 @@ import { Link } from 'react-router-dom';
 const destinations = [
   {
     name: 'Salalah Heritage Tour',
-    image: `${import.meta.env.BASE_URL}images/dest-salalah.jpg`,
+    image: '/images/dest-salalah.jpg',
     description: 'Explore the lush green landscapes of Salalah, visit ancient frankincense trails, and enjoy pristine beaches.',
   },
   {
     name: 'Maldives Beach Escape',
-    image: `${import.meta.env.BASE_URL}images/dest-maldives.jpg`,
+    image: '/images/dest-maldives.jpg',
     description: 'Crystal-clear waters, overwater villas, and stunning coral reefs await you in this tropical paradise.',
   },
   {
     name: 'Dubai City Experience',
-    image: `${import.meta.env.BASE_URL}images/dest-dubai.jpg`,
+    image: '/images/dest-dubai.jpg',
     description: 'From the towering Burj Khalifa to golden desert safaris, discover the glamour and adventure of Dubai.',
   },
   {
     name: 'Muscat Cultural Journey',
-    image: `${import.meta.env.BASE_URL}images/dest-muscat.jpg`,
+    image: '/images/dest-muscat.jpg',
     description: 'Wander through ancient souks, visit the Grand Mosque, and savor authentic Omani cuisine daily.',
   },
   {
     name: 'Salalah Monsoon Special',
-    image: `${import.meta.env.BASE_URL}images/dest-salalah.jpg`,
+    image: '/images/dest-salalah.jpg',
     description: 'Experience the magical Khareef season with misty mountains, waterfalls, and cool tropical breezes.',
   },
   {
     name: 'Maldives Honeymoon',
-    image: `${import.meta.env.BASE_URL}images/dest-maldives.jpg`,
+    image: '/images/dest-maldives.jpg',
     description: 'Romantic sunsets, private island dining, and spa retreats designed for unforgettable honeymoon moments.',
   },
 ];

@@ -28,13 +28,13 @@ const Navbar = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center gap-3">
             <img
-              src={`${import.meta.env.BASE_URL}/images/logo-icon.png`}
+              src="/images/logo-icon.png"
               alt="Al Fawaz International Travels"
               className="h-14 w-auto object-contain"
             />
 
             <img
-              src={`${import.meta.env.BASE_URL}/images/company%20name.jpeg`}
+              src="/images/company%20name.jpeg"
               alt="Al Fawaz company name"
               className="h-14 w-auto object-contain max-w-[240px]"
             />
@@ -96,7 +96,7 @@ const Navbar = () => {
         <div className="flex items-center justify-between px-6 h-[72px] border-b border-white/10">
           <Link to="/" className="flex items-center gap-3" onClick={() => setMobileMenuOpen(false)}>
             <img
-              src={`${import.meta.env.BASE_URL}/images/logo-icon.png`}
+              src="/images/logo-icon.png"
               alt="Al Fawaz"
               className="h-10 w-auto object-contain"
             />

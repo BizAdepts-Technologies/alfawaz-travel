@@ -5,19 +5,19 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 const memories = [
   {
     title: 'Hidden family gems',
-    image: `${import.meta.env.BASE_URL}/images/travel_family_memory.png`, // Family/travel image
+    image: '/images/travel_family_memory.png', // Family/travel image
   },
   {
     title: 'Discovering culture',
-    image: `${import.meta.env.BASE_URL}/images/travel_food_memory.png`, // Food/culture image
+    image: '/images/travel_food_memory.png', // Food/culture image
   },
   {
     title: 'The family fun list',
-    image: `${import.meta.env.BASE_URL}/images/travel_adventure_memory.png`, // Surfing/fun image
+    image: '/images/travel_adventure_memory.png', // Surfing/fun image
   },
   {
     title: 'Unforgettable adventures',
-    image: `${import.meta.env.BASE_URL}/images/Unforgettable adventures.jpeg`, // Adventure image
+    image: '/images/Unforgettable adventures.jpeg', // Adventure image
   }
 ];
 

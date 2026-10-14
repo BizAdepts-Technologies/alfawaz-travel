@@ -20,12 +20,12 @@ const Footer = () => {
           <div>
             <div className="flex items-center gap-3 mb-6">
               <img
-                src={`${import.meta.env.BASE_URL}/images/logo-icon.png`}
+                src="/images/logo-icon.png"
                 alt="Al Fawaz International Travels"
                 className="h-12 w-auto object-contain rounded-[3px]"
               />
               <img
-                src={`${import.meta.env.BASE_URL}/images/company_name_footer.png`}
+                src="/images/company_name_footer.png"
                 alt="Al Fawaz International Travels Text"
                 className="h-12 w-auto object-contain"
               />

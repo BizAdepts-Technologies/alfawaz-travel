@@ -1,13 +1,11 @@
 import { useEffect, useRef, type ReactNode } from 'react';
 
-const getImgUrl = (path: string) => `${import.meta.env.BASE_URL}${path}`;
-
 const IMAGES = {
-  dunes: getImgUrl('/images/dest-dubai.jpg'),
-  mountain: getImgUrl('/images/service-tours.jpg'),
-  center: getImgUrl('/images/dest-salalah.jpg'),
-  coast: getImgUrl('/images/dest-muscat.jpg'),
-  forest: getImgUrl('/images/Unforgettable adventures.jpeg'),
+  dunes: '/images/dest-dubai.jpg',
+  mountain: '/images/service-tours.jpg',
+  center: '/images/dest-salalah.jpg',
+  coast: '/images/dest-muscat.jpg',
+  forest: '/images/Unforgettable adventures.jpeg',
 };
 
 type Pillar = {

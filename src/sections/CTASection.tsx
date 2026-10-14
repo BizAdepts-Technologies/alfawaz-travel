@@ -8,7 +8,7 @@ const CTASection = () => (
       position: 'relative',
       minHeight: '280px',
       padding: '3rem 0',
-      background: `url("${import.meta.env.BASE_URL}/images/solo_travel_cta.png") center/cover no-repeat`,
+      background: 'url("/images/solo_travel_cta.png") center/cover no-repeat',
       display: 'flex',
       alignItems: 'center'
     }}
